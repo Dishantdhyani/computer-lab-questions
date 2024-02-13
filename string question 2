@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char s[20],s1[20],i=0,j=0;
+    int count=0;
+
+    printf("input a string\n");
+    fgets(s,20,stdin);
+    fgets(s1,20,stdin);z
+
+    
+
+    while(s[i]!='\0')
+    {
+        if(s[i]==s1[j]) 
+        {
+        count++;
+        }
+        i++;
+    }
+    printf("%d\n",count);
+    return 0;
+}
