@@ -1,0 +1,47 @@
+#include<stdio.h>
+int frequency(int [][10],int,int);
+int main()
+{
+    int a[10][10],i,j,r,c;
+    printf("enter the row and columb");
+    scanf("%d%d",&r,&c);
+    
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+    }
+    int res=frequency(a,r,c);
+    printf("%d",res);
+     for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            printf("%d",a[i][j]);
+        }
+    }
+    return 0;
+}
+
+int frequency(int a[][10],int r,int c)
+{
+    int n,count=0,i,j;
+    
+    printf("enter num");
+    scanf("%d",&n);
+
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            if(a[i][j]==n)
+            {
+                count++;
+                a[i][j]=0;
+            }
+        }
+    }
+    return count;
+}
